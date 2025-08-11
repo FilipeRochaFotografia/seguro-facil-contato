@@ -12,7 +12,7 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1.25rem',
 			screens: {
 				'2xl': '1400px'
 			}
@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				heading: ["Poppins", "sans-serif"],
 				body: ["Inter", "system-ui", "sans-serif"],
+				roboto: ["Roboto", "system-ui", "sans-serif"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

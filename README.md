@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+### FACILITE Proteção Veicular – Landing Page
 
-## Project info
+Este projeto é uma landing page em React + Vite com Tailwind e shadcn-ui.
 
-**URL**: https://lovable.dev/projects/851f6eb7-55e0-49cd-bb8b-b37a37a16ca0
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/851f6eb7-55e0-49cd-bb8b-b37a37a16ca0) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Como rodar
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Organização e manutenção
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Dados da empresa**: centralizados em `src/config/company.ts`.
+  - Telefones, CNPJ, endereço, URLs, e caminhos dos assets públicos.
+  - Atualize `company.urls.site` e `company.urls.canonical` quando o domínio final estiver definido.
+  - Ícones do grid de coberturas usam imagens da pasta `public` definidas em `features` no mesmo arquivo.
+- **Páginas**: landing principal em `src/pages/Index.tsx`. Página 404 em `src/pages/NotFound.tsx`.
+- **Estilos**: tokens e utilitários em `src/index.css` e `tailwind.config.ts`.
+- **Componentes UI**: botões e utilitários em `src/components/ui/*`.
 
-**Use GitHub Codespaces**
+### Assets
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Coloque logotipo, selo SUSEP, ícones e hero na pasta `public/`. Os nomes atualmente esperados:
 
-## What technologies are used for this project?
+- `logoreta.png` (logo principal)
+- `logobranca.png` (marca d’água usada no card laranja da seção de referência)
+- `carrofundo.png` (imagem do carro+moto)
+- `selofacilite.png` (selo SUSEP)
+- Ícones do grid: `assistencia.png`, `perda total.png`, `guincho.png`, `cobertura para vidros.png`, `colisao.png`, `fenomenos naturais.png`, `incendio.png`, `carro reserva.png`, `furto roubo.png`, `cobertura em todo Brasil.png`
 
-This project is built with:
+Se os nomes mudarem, ajuste em `src/config/company.ts`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### SEO
 
-## How can I deploy this project?
+- Metadados base em `index.html`.
+- JSON-LD de organização inserido em `src/pages/Index.tsx` a partir de `company`.
 
-Simply open [Lovable](https://lovable.dev/projects/851f6eb7-55e0-49cd-bb8b-b37a37a16ca0) and click on Share -> Publish.
+### Notas de layout (hero & seções)
 
-## Can I connect a custom domain to my Lovable project?
+- Hero com degradê azul cobrindo topo e header embutido.
+- Título em Roboto, bold, e bullets alinhados com ícones laranja.
+- Imagem do carro/moto invade levemente a borda inferior do box branco.
+- Seção “Por que a Facilite…”: card laranja com `logobranca.png` como marca d’água (opacidade 10%) atrás do `funcionario.png`, que ultrapassa discretamente o topo do card.
 
-Yes, you can!
+### Contatos
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Assistência 24h: 0800 591 5328
+- Financeiro: 73 973 8803-0570
+- WhatsApp para cotação: +55 73 9139-5417
+- CNPJ: 51.012.452/0001-24
+- Endereço: Rua Jose Bonifacio, 26 - Centro, Itamaraju - BA
