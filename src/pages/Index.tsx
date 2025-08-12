@@ -91,17 +91,20 @@ const Index = () => {
                 </div>
               </div>
               <div className="relative z-10 flex justify-center md:justify-end">
-                <img
-                  src={company.assets.hero}
-                  alt="Carro e moto - FACILITE Proteção Veicular"
-                  className="pointer-events-none select-none h-auto w-full max-w-xl md:max-w-2xl lg:max-w-3xl -translate-y-1 md:translate-y-4 lg:translate-y-6 md:-translate-x-10 lg:-translate-x-14 scale-[1.38] md:scale-[1.5] -mb-10 md:-mb-16 z-10 object-contain"
-                  loading="eager"
+                <picture>
+                  <source srcSet="/carrofundo.webp" type="image/webp" />
+                  <img
+                    src={company.assets.hero}
+                    alt="Carro e moto - FACILITE Proteção Veicular"
+                    className="pointer-events-none select-none h-auto w-full max-w-xl md:max-w-2xl lg:max-w-3xl -translate-y-1 md:translate-y-4 lg:translate-y-6 md:-translate-x-10 lg:-translate-x-14 scale-[1.38] md:scale-[1.5] -mb-10 md:-mb-16 z-10 object-contain"
+                    loading="eager"
                     decoding="async"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "/carrofundo.png";
-                  }}
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = "/carrofundo.png";
+                    }}
                   />
-                </div>
+                </picture>
+              </div>
               </div>
             </div>
             {/* Selo na faixa azul: mobile centralizado, desktop alinhado ao início */}
@@ -206,13 +209,19 @@ const Index = () => {
                   aria-hidden
                   className="absolute inset-0 m-auto h-[60%] w-auto opacity-10 pointer-events-none select-none"
                 />
-                <img
-                  src="/funcionario.png"
-                  alt="Colaborador FACILITE"
-                  className="absolute inset-x-0 mx-auto bottom-0 h-[118%] md:h-[126%] w-auto object-contain drop-shadow-xl z-10"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <picture>
+                  <source srcSet="/funcionario.webp" type="image/webp" />
+                  <img
+                    src="/funcionario.png"
+                    alt="Colaborador FACILITE"
+                    className="absolute inset-x-0 mx-auto bottom-0 h-[118%] md:h-[126%] w-auto object-contain drop-shadow-xl z-10"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = "/funcionario.png";
+                    }}
+                  />
+                </picture>
                 </div>
                 
                 {/* Card transparente com o ponto "Atendimento rápido e humanizado" (link para WhatsApp) */}
