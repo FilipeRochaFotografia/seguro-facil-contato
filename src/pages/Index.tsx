@@ -281,7 +281,8 @@ const Index = () => {
           </div>
         </div>
         <div className="pb-8 text-center text-xs text-primary/80">
-          © {new Date().getFullYear()} FACILITE Proteção Veicular. Todos os direitos reservados.
+          <span>© {new Date().getFullYear()} FACILITE Proteção Veicular.</span>
+          <span className="block md:inline"> Todos os direitos reservados.</span>
         </div>
       </footer>
 
