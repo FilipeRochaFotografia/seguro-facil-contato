@@ -70,7 +70,7 @@ export type FeatureItem = {
 export const features: FeatureItem[] = [
   { iconSrc: "/coberturaemtodoBrasil.png", label: "Cobertura em todo o Brasil" },
   { iconSrc: "/assistencia.png", label: "Assistência" },
-  { iconSrc: "/perda total.png", label: "Perda total" },
+  { iconSrc: "/perdatotal.png", label: "Perda total" },
   { iconSrc: "/guincho.png", label: "Guincho" },
   { iconSrc: "/coberturaparavidros.png", label: "Cobertura para vidros" },
   { iconSrc: "/colisao.png", label: "Colisão" },
