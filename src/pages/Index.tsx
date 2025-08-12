@@ -31,7 +31,7 @@ const Index = () => {
       <main>
         {/* Hero (com logo e CTA no topo, sem header separado) */}
         <section className="bg-hero-gradient text-primary-foreground">
-          <div className="container pt-6 md:pt-10 pb-8 md:pb-24">
+          <div className="container pt-6 md:pt-10 pb-8 md:pb-16">
             <div className="mb-8 max-w-[1280px] mx-auto flex items-center justify-between gap-3 min-h-[56px] md:min-h-[64px]">
           <a href="#" aria-label="Página inicial FACILITE" className="flex items-center gap-3">
             <img
@@ -71,8 +71,8 @@ const Index = () => {
                     "Proteção sem burocracia",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2">
-                      <CheckCircle2 className="text-accent shrink-0" aria-hidden size={24} />
-                      <span className="text-base md:text-lg text-foreground leading-snug">{item}</span>
+                      <CheckCircle2 className="text-accent shrink-0" aria-hidden size={20} />
+                      <span className="text-sm md:text-lg text-foreground leading-snug whitespace-nowrap">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -105,7 +105,7 @@ const Index = () => {
               </div>
             </div>
             {/* Selo na faixa azul: mobile centralizado, desktop alinhado ao início */}
-            <div className="mt-4 md:mt-8 max-w-[1120px] mx-auto flex items-center justify-center md:justify-start gap-3 md:gap-4 text-primary-foreground pl-0 md:pl-4">
+            <div className="mt-4 md:mt-6 max-w-[1120px] mx-auto flex items-center justify-center md:justify-start gap-3 md:gap-4 text-primary-foreground pl-0 md:pl-4">
               <img
                 src={company.assets.susepBadge}
                 alt="Selo SUSEP - FACILITE Proteção Veicular"
@@ -147,10 +147,10 @@ const Index = () => {
           <div className="container pb-6 md:pb-16">
             <div className="mx-auto w-full max-w-[1120px] rounded-2xl border border-border bg-secondary px-6 py-4 md:px-10 md:py-6 shadow-soft">
               <div className="flex items-center justify-center gap-2 md:gap-1 lg:gap-1 text-center">
-                <img src="/iconecarro.png" alt="Proteção veicular" className="h-12 w-12 md:h-20 md:w-20 object-contain" />
-                <p className="text-primary text-base md:text-2xl leading-snug md:whitespace-nowrap">
-                  <span className="block md:inline font-bold md:font-semibold">Não é só proteção, é confiança.</span>
-                  <span className="block md:inline md:ml-2">E disso, a gente entende.</span>
+                <img src="/iconecarro.png" alt="Proteção veicular" className="h-10 w-10 md:h-20 md:w-20 object-contain" />
+                <p className="text-primary leading-snug">
+                  <span className="block font-bold text-base whitespace-nowrap md:inline md:text-2xl md:whitespace-nowrap">Não é só proteção, é confiança.</span>
+                  <span className="block text-sm md:inline md:text-2xl md:ml-2">E disso, a gente entende.</span>
                 </p>
               </div>
             </div>
@@ -175,8 +175,8 @@ const Index = () => {
                     "Rede ampla de oficinas credenciadas",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2 className="mt-0.5 text-accent" aria-hidden size={22} />
-                      <span className="text-base md:text-lg text-primary">{item}</span>
+                      <CheckCircle2 className="mt-0.5 text-accent shrink-0" aria-hidden size={20} />
+                      <span className="text-base md:text-lg text-primary leading-snug">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -237,7 +237,7 @@ const Index = () => {
       <footer className="border-t border-border bg-background">
           <div className="container grid gap-8 md:gap-12 pt-4 pb-8 md:pt-4 md:pb-10 md:grid-cols-2 md:items-center">
           {/* Coluna: Identidade e dados da empresa */}
-            <div className="space-y-1 md:pr-8 -mt-1">
+            <div className="md:space-y-1 md:pr-8">
             <img
               src="/logolaranja.png"
               alt="Logotipo FACILITE Proteção Veicular"
@@ -246,7 +246,7 @@ const Index = () => {
               decoding="async"
             />
               {/* Telefones (logo abaixo da logo) - apenas mobile */}
-              <div className="mt-10 flex flex-col items-start gap-1.5 md:hidden">
+              <div className="mt-6 flex flex-col items-start gap-1 md:hidden">
                 <p className="text-sm leading-tight text-foreground">
                   <span className="font-semibold text-primary">{company.phones.assistance24h.label}:</span> {company.phones.assistance24h.display}
                 </p>
@@ -257,7 +257,7 @@ const Index = () => {
                   <span className="font-semibold text-primary">{company.phones.salesWhatsApp.label}:</span> {company.phones.salesWhatsApp.display}
                 </p>
               </div>
-              <p className="mt-12 md:mt-12 text-sm leading-tight text-foreground">
+              <p className="mt-8 md:mt-12 text-sm leading-tight text-foreground">
               <span className="font-semibold text-primary">Empresa:</span> {company.name}
             </p>
             <p className="text-sm leading-tight text-foreground">
@@ -268,7 +268,7 @@ const Index = () => {
             </p>
           </div>
           {/* Coluna: Contatos + CTA */}
-            <div className="hidden md:flex flex-col items-start md:items-end gap-1.5 md:pl-8 -mt-1">
+            <div className="hidden md:flex flex-col items-start md:items-end gap-1.5 md:pl-8">
             <p className="text-sm leading-tight text-foreground">
               <span className="font-semibold text-primary">{company.phones.assistance24h.label}:</span> {company.phones.assistance24h.display}
             </p>
