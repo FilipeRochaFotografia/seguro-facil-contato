@@ -123,7 +123,7 @@ const Index = () => {
 
         {/* Coberturas */}
         <section className="bg-background">
-          <div className="container py-8 md:py-14">
+          <div className="container pt-6 pb-6 md:py-14">
             <div className="grid grid-cols-4 gap-4 sm:grid-cols-5 md:grid-cols-5">
               {features.map(({ iconSrc, label }) => {
                 const mobileColStart =
@@ -134,7 +134,7 @@ const Index = () => {
                       : "";
                 return (
                 <div key={label} className={`flex flex-col items-center text-center gap-1.5 ${mobileColStart}`}>
-                  <img src={iconSrc} alt={label} className="h-9 w-9 md:h-14 md:w-14 object-contain" />
+                  <img src={iconSrc} alt={label} className="h-9 w-9 md:h-14 md:w-14 object-contain icon-shadow-soft" />
                   <span className="text-[11px] md:text-sm font-semibold text-primary leading-tight">{label}</span>
                 </div>
               );})}
@@ -144,8 +144,8 @@ const Index = () => {
 
         {/* Faixa de confiança (barra dentro do container) */}
         <section className="bg-background">
-          <div className="container pb-12 md:pb-16">
-            <div className="mx-auto w-full max-w-[1120px] rounded-2xl border border-border bg-secondary px-8 py-5 md:px-10 md:py-6 shadow-sm">
+          <div className="container pb-6 md:pb-16">
+            <div className="mx-auto w-full max-w-[1120px] rounded-2xl border border-border bg-secondary px-6 py-4 md:px-10 md:py-6 shadow-soft">
               <div className="flex items-center justify-center gap-2 md:gap-1 lg:gap-1 text-center">
                 <img src="/iconecarro.png" alt="Proteção veicular" className="h-12 w-12 md:h-20 md:w-20 object-contain" />
                 <p className="text-primary text-base md:text-2xl leading-snug md:whitespace-nowrap">
@@ -159,8 +159,8 @@ const Index = () => {
 
         {/* Seção: Por que a Facilite é referência (após ícones e faixa) */}
         <section className="bg-background">
-          <div className="container pt-6 pb-10 md:py-12">
-            <div className="grid items-center gap-6 md:grid-cols-2">
+          <div className="container pt-2 pb-8 md:py-12">
+              <div className="grid items-center gap-6 md:grid-cols-2 -mt-2 md:mt-0">
               {/* Texto */}
               <div className="max-w-[560px] md:-mt-4">
                 <h2 className="font-roboto text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-6 text-center md:text-left">
@@ -181,7 +181,7 @@ const Index = () => {
                   ))}
                 </ul>
                 {/* CTA azul: abaixo dos bullets (mobile e desktop) */}
-                <div className="mt-6">
+                <div className="mt-4 md:mt-6">
                   <Button
                     asChild
                     size="lg"
@@ -198,7 +198,7 @@ const Index = () => {
 
               {/* Imagem com sobreposição ao fundo laranja */}
               <div className="flex flex-col items-center mt-8 md:mt-6">
-                <div className="relative rounded-2xl bg-accent overflow-visible h-[230px] md:h-[320px] w-full">
+                <div className="relative rounded-2xl bg-accent overflow-visible h-[230px] md:h-[320px] w-full shadow-soft">
                 {/* Logo de fundo com baixa opacidade */}
                 <img
                   src="/logobranca.png"
@@ -215,13 +215,19 @@ const Index = () => {
                 />
                 </div>
                 
-                {/* Card transparente com o ponto "Atendimento rápido e humanizado" */}
-                <div className="mt-4 w-full rounded-2xl border border-border bg-transparent px-5 py-3">
+                {/* Card transparente com o ponto "Atendimento rápido e humanizado" (link para WhatsApp) */}
+                <a
+                  href={company.urls.whatsappCTA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Iniciar atendimento rápido e humanizado pelo WhatsApp"
+                  className="mt-4 block w-full rounded-2xl border border-border bg-transparent px-5 py-3 hover:shadow-elevated shadow-soft transition-shadow transition-colors hover:bg-secondary/60 cursor-pointer hover-scale"
+                >
                   <div className="flex items-center justify-center gap-2 text-center">
                     <CheckCircle2 className="text-accent" aria-hidden size={22} />
                     <span className="text-primary text-sm md:text-base">Atendimento rápido e humanizado</span>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
