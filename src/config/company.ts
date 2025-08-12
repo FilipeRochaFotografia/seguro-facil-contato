@@ -68,16 +68,16 @@ export type FeatureItem = {
 };
 
 export const features: FeatureItem[] = [
-  { iconSrc: "/cobertura em todo Brasil.png", label: "Cobertura em todo o Brasil" },
+  { iconSrc: "/coberturaemtodoBrasil.png", label: "Cobertura em todo o Brasil" },
   { iconSrc: "/assistencia.png", label: "Assistência" },
   { iconSrc: "/perda total.png", label: "Perda total" },
   { iconSrc: "/guincho.png", label: "Guincho" },
-  { iconSrc: "/cobertura para vidros.png", label: "Cobertura para vidros" },
+  { iconSrc: "/coberturaparavidros.png", label: "Cobertura para vidros" },
   { iconSrc: "/colisao.png", label: "Colisão" },
-  { iconSrc: "/fenomenos naturais.png", label: "Fenômenos naturais" },
+  { iconSrc: "/fenomenosnaturais.png", label: "Fenômenos naturais" },
   { iconSrc: "/incendio.png", label: "Incêndio" },
-  { iconSrc: "/carro reserva.png", label: "Carro reserva" },
-  { iconSrc: "/furto roubo.png", label: "Furto/Roubo" },
+  { iconSrc: "/carroreserva.png", label: "Carro reserva" },
+  { iconSrc: "/furtoroubo.png", label: "Furto/Roubo" },
 ];
 
 
