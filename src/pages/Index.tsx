@@ -31,7 +31,7 @@ const Index = () => {
       <main>
         {/* Hero (com logo e CTA no topo, sem header separado) */}
         <section className="bg-hero-gradient text-primary-foreground">
-          <div className="container pt-6 md:pt-10 pb-16 md:pb-24">
+          <div className="container pt-6 md:pt-10 pb-8 md:pb-24">
             <div className="mb-8 max-w-[1280px] mx-auto flex items-center justify-between gap-3 min-h-[56px] md:min-h-[64px]">
           <a href="#" aria-label="Página inicial FACILITE" className="flex items-center gap-3">
             <img
@@ -105,7 +105,7 @@ const Index = () => {
               </div>
             </div>
             {/* Selo na faixa azul: mobile centralizado, desktop alinhado ao início */}
-            <div className="mt-6 md:mt-8 max-w-[1120px] mx-auto flex items-center justify-center md:justify-start gap-3 md:gap-4 text-primary-foreground pl-0 md:pl-4">
+            <div className="mt-4 md:mt-8 max-w-[1120px] mx-auto flex items-center justify-center md:justify-start gap-3 md:gap-4 text-primary-foreground pl-0 md:pl-4">
               <img
                 src={company.assets.susepBadge}
                 alt="Selo SUSEP - FACILITE Proteção Veicular"
@@ -235,9 +235,9 @@ const Index = () => {
       </main>
 
       <footer className="border-t border-border bg-background">
-        <div className="container grid gap-8 md:gap-12 pt-4 pb-8 md:pt-4 md:pb-10 md:grid-cols-2 md:items-center">
+          <div className="container grid gap-8 md:gap-12 pt-4 pb-8 md:pt-4 md:pb-10 md:grid-cols-2 md:items-center">
           {/* Coluna: Identidade e dados da empresa */}
-          <div className="space-y-1 md:pr-8 -mt-1">
+            <div className="space-y-1 md:pr-8 -mt-1">
             <img
               src="/logolaranja.png"
               alt="Logotipo FACILITE Proteção Veicular"
@@ -245,7 +245,19 @@ const Index = () => {
               loading="lazy"
               decoding="async"
             />
-            <p className="mt-8 text-sm leading-tight text-foreground">
+              {/* Telefones (logo abaixo da logo) - apenas mobile */}
+              <div className="mt-10 flex flex-col items-start gap-1.5 md:hidden">
+                <p className="text-sm leading-tight text-foreground">
+                  <span className="font-semibold text-primary">{company.phones.assistance24h.label}:</span> {company.phones.assistance24h.display}
+                </p>
+                <p className="text-sm leading-tight text-foreground">
+                  <span className="font-semibold text-primary">Financeiro:</span> {company.phones.financeAndBroadcast.display}
+                </p>
+                <p className="text-sm leading-tight text-foreground">
+                  <span className="font-semibold text-primary">{company.phones.salesWhatsApp.label}:</span> {company.phones.salesWhatsApp.display}
+                </p>
+              </div>
+              <p className="mt-12 md:mt-12 text-sm leading-tight text-foreground">
               <span className="font-semibold text-primary">Empresa:</span> {company.name}
             </p>
             <p className="text-sm leading-tight text-foreground">
@@ -256,7 +268,7 @@ const Index = () => {
             </p>
           </div>
           {/* Coluna: Contatos + CTA */}
-          <div className="flex flex-col items-start md:items-end gap-1.5 md:pl-8 -mt-1">
+            <div className="hidden md:flex flex-col items-start md:items-end gap-1.5 md:pl-8 -mt-1">
             <p className="text-sm leading-tight text-foreground">
               <span className="font-semibold text-primary">{company.phones.assistance24h.label}:</span> {company.phones.assistance24h.display}
             </p>
