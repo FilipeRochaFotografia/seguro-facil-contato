@@ -118,7 +118,7 @@ const Index = () => {
               />
               <div className="text-center md:text-left text-sm md:text-lg leading-tight">
                 <span className="block">Responsabilidade com você.</span>
-                <span className="block">Regulamentado pela SUSEP.</span>
+                <span className="block">Empresa cadastrada na SUSEP.</span>
               </div>
             </div>
           </div>
